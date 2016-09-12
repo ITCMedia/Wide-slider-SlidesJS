@@ -1,0 +1,142 @@
+
+
+<div class="slider">
+	 <div id="slides" class="wrapper">	
+		<div class="slide">
+			<a href="#">
+				<img src="images/slide1.jpg" alt="" />
+			</a>
+		</div>	
+		<div class="slide">
+			<a href="#">
+				<img src="images/slide1.jpg" alt="" />
+			</a>
+		</div>	
+		<div class="slide">
+			<a href="#">
+				<img src="images/slide1.jpg" alt="" />
+			</a>
+		</div>	
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.slides.min.js"></script>
+<script>
+if($('#slides').length != 0) {
+	$('#slides').slidesjs({
+		width: 960,
+		height: 310,
+		navigation: {
+		  effect: "slide"
+		}
+	});
+}
+</script>
+
+<style>
+
+.slider{
+	position: relative;
+	background: url('../images/slider_bg.png') repeat-x left center; 
+}
+
+#slides{
+	position: relative;
+    height: 420px;
+	width: 1200px;
+    overflow: hidden;
+}
+
+#slides .slidesjs-container,
+#slides .slidesjs-control{
+    height: 420px !important;
+	width: 1200px !important;
+}
+
+#slides .slidesjs-slide{
+	display: none;
+}
+
+#slides .slidesjs-navigation{
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 51px;
+    z-index: 10;
+    top: 185px;
+    cursor: pointer;
+    text-decoration: none;
+    background: url('../images/slider_arrows.png') no-repeat;
+}
+
+#slides .slidesjs-previous {
+	left: 3%;
+	background-position: 0px 0px;
+}
+
+#slides .slidesjs-next {
+    right: 3%;
+    background-position: -53px 0px;
+}
+
+#slides .slidesjs-previous:hover{
+	background-position: 0px -54px;
+}
+
+#slides .slidesjs-next:hover{
+    background-position: -53px -54px;
+}
+
+#slides ul.slidesjs-pagination {
+    top: -40px;
+    margin-right: 20px;
+    position: relative;
+    text-align: right;
+    z-index: 10;
+    display: block;
+}
+#slides ul.slidesjs-pagination li{
+	display: inline-block;
+	padding: 7px;
+}
+#slides ul.slidesjs-pagination li a{
+    font-size: 0px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    border-radius: 25px;
+    background: #25c2ca;
+}
+#slides ul.slidesjs-pagination li a.active{
+    background: #0a366a;
+}
+
+#slides .slide{
+    height: 420px;
+	width: 1200px !important;
+}
+
+#slides .slide img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#slides .slide1 .more_btn{
+    position: absolute;
+    left: 25px;
+    top: 130px;
+    font-size: 15px;
+    line-height: 23px;
+    text-transform: none;
+    background: #9d0707;
+    width: 112px;
+    border: 1px solid #790606;
+    height: 24px;
+	display: none;
+}
+
+#slides .slide1 .more_btn:hover{
+	background: #BF2C2C;
+}
+</style>
